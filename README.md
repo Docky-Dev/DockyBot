@@ -1,38 +1,37 @@
 # 📊 Fetch MrBeast Subs (via GitHub App)
 
-**Fetch MrBeast Subs** est un workflow GitHub Actions qui récupère automatiquement le **nombre d’abonnés YouTube de MrBeast** toutes les 5 minutes, via une **GitHub App** personnalisée.
-Les données sont ensuite enregistrées dans un fichier `mrbeast.json` et poussées sur le dépôt GitHub, permettant un suivi en temps réel des abonnés.
+**Fetch MrBeast Subs** is a GitHub Actions workflow that automatically retrieves the **YouTube subscriber count of MrBeast** every 5 minutes, using a **custom GitHub App**.
+The data is then saved to a `mrbeast.json` file and pushed to the repository, allowing real-time tracking of the subscriber count.
 
 ---
 
-## 🚀 Fonctionnement
+## 🚀 How It Works
 
-Le script utilise :
+The script uses:
 
-* **Mixerno API** → pour obtenir le nombre d’abonnés de la chaîne YouTube de MrBeast
-* **GitHub App** → pour authentifier et publier les mises à jour automatiquement
-* **GitHub Actions (cron)** → pour exécuter la tâche toutes les 5 minutes sans intervention manuelle
-
----
-
-## ⚙️ Configuration
-
-### 1. Secrets à ajouter dans ton dépôt
-
-Dans ton dépôt GitHub, va dans **Settings → Secrets → Actions** et ajoute ces trois valeurs :
-
-| Nom du secret     | Description                                   |
-| ----------------- | --------------------------------------------- |
-| `APP_ID`          | ID de ton GitHub App                          |
-| `INSTALLATION_ID` | ID de l’installation de ton App sur ton dépôt |
-| `PRIVATE_KEY`     | Clé privée (au format PEM) de ton App         |
-
+* **Mixerno API** → to fetch the subscriber count of MrBeast’s YouTube channel
+* **GitHub App** → to authenticate and push updates automatically
+* **GitHub Actions (cron)** → to run the task every 5 minutes without manual action
 
 ---
 
-## 📁 Résultat
+## ⚙️ Setup
 
-Un fichier `mrbeast.json` contenant la dernière valeur récupérée :
+### 1. Add Secrets to Your Repository
+
+In your GitHub repository, go to **Settings → Secrets → Actions** and add the following three values:
+
+| Secret Name       | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| `APP_ID`          | Your GitHub App’s ID                               |
+| `INSTALLATION_ID` | The installation ID of your App on your repository |
+| `PRIVATE_KEY`     | The private key (in PEM format) of your App        |
+
+---
+
+## 📁 Output
+
+A file named `mrbeast.json` containing the latest fetched value:
 
 ```json
 {
@@ -42,17 +41,17 @@ Un fichier `mrbeast.json` contenant la dernière valeur récupérée :
 
 ---
 
-## 💡 Objectif
+## 💡 Purpose
 
-Ce projet sert d’exemple pour :
+This project demonstrates how to:
 
-* apprendre à utiliser une **GitHub App** dans un workflow Actions,
-* automatiser la mise à jour de données externes,
-* stocker et suivre l’évolution de statistiques en temps réel.
+* use a **GitHub App** inside a workflow,
+* automate the update of external data,
+* store and track real-time statistics directly within a GitHub repository.
 
 ---
 
-## 👤 Auteur
+## 👤 Author
 
-**Projet développé par [DevXCat](https://github.com/DevXCat)**
-GitHub App utilisée : **DockyBot**
+**Project developed by [DevXCat](https://github.com/DevXCat)**
+GitHub App used: **DockyBot**
