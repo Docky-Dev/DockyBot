@@ -54,4 +54,5 @@ This project demonstrates how to:
 ## 👤 Author
 
 **Project developed by [DevXCat](https://github.com/DevXCat)**
+
 GitHub App used: **DockyBot**
