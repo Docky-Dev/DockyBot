@@ -35,7 +35,7 @@ A file named `mrbeast.json` containing the latest fetched value:
 
 ```json
 {
-  "subscriberCount": "268512345"
+  "subscriberCount": "123456789"
 }
 ```
 
